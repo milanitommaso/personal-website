@@ -30,16 +30,22 @@ cursor = conn.cursor()
 
 @app.route("/github")
 def github():
+    # track the visit
+    track_visit(conn, request, page="github")
+
     return redirect("https://github.com/milanitommaso")
 
 @app.route("/linkedin")
 def linkedin():
+    # track the visit
+    track_visit(conn, request, page="linkedin")
+
     return redirect("https://www.linkedin.com/in/milani-tommaso/")
 
 @app.route("/")
 def index():
     # track the visit
-    track_visit(request, page="index")
+    track_visit(conn, request, page="index")
 
     return render_template("index.html")
 
