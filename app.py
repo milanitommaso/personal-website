@@ -6,7 +6,7 @@ from pymysql.cursors import DictCursor
 import json
 from visit_tracker import track_visit
 
-
+DEPLOY = True
 app = Flask(__name__)
 app.config["DEBUG"] = True
 
@@ -31,21 +31,24 @@ cursor = conn.cursor()
 @app.route("/github")
 def github():
     # track the visit
-    track_visit(conn, request, page="github")
+    if DEPLOY: 
+        track_visit(conn, request, page="github")
 
     return redirect("https://github.com/milanitommaso")
 
 @app.route("/linkedin")
 def linkedin():
     # track the visit
-    track_visit(conn, request, page="linkedin")
+    if DEPLOY:
+        track_visit(conn, request, page="linkedin")
 
     return redirect("https://www.linkedin.com/in/milani-tommaso/")
 
 @app.route("/")
 def index():
     # track the visit
-    track_visit(conn, request, page="index")
+    if DEPLOY:
+        track_visit(conn, request, page="index")
 
     return render_template("index.html")
 
