@@ -52,6 +52,30 @@ def index():
 
     return render_template("index.html")
 
+@app.route("/resume")
+def resume():
+    # track the visit
+    if DEPLOY:
+        track_visit(conn, request, page="resume")
+
+    return render_template("resume.html")
+
+@app.route("/projects")
+def projects():
+    # track the visit
+    if DEPLOY:
+        track_visit(conn, request, page="projects")
+
+    return render_template("projects.html")
+
+@app.route("/contact")
+def contact():
+    # track the visit
+    if DEPLOY:
+        track_visit(conn, request, page="contact")
+
+    return render_template("contact.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=8000)
