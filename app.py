@@ -36,6 +36,14 @@ def github():
 
     return redirect("https://github.com/milanitommaso")
 
+@app.route("/github/<repository>")
+def github_repository(repository):
+    # track the visit
+    if DEPLOY:
+        track_visit(conn, request, page="github")
+
+    return redirect("https://github.com/milanitommaso/{}".format(repository))
+
 @app.route("/linkedin")
 def linkedin():
     # track the visit
@@ -51,6 +59,30 @@ def index():
         track_visit(conn, request, page="index")
 
     return render_template("index.html")
+
+@app.route("/resume")
+def resume():
+    # track the visit
+    if DEPLOY:
+        track_visit(conn, request, page="resume")
+
+    return render_template("resume.html")
+
+@app.route("/projects")
+def projects():
+    # track the visit
+    if DEPLOY:
+        track_visit(conn, request, page="projects")
+
+    return render_template("projects.html")
+
+@app.route("/contact")
+def contact():
+    # track the visit
+    if DEPLOY:
+        track_visit(conn, request, page="contact")
+
+    return render_template("contact.html")
 
 
 if __name__ == "__main__":
