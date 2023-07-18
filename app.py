@@ -36,6 +36,14 @@ def github():
 
     return redirect("https://github.com/milanitommaso")
 
+@app.route("/github/<repository>")
+def github_repository(repository):
+    # track the visit
+    if DEPLOY:
+        track_visit(conn, request, page="github")
+
+    return redirect("https://github.com/milanitommaso/{}".format(repository))
+
 @app.route("/linkedin")
 def linkedin():
     # track the visit
