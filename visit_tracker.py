@@ -32,3 +32,4 @@ def track_visit(db_connection, request, page: str):
 
     # close the cursor
     cursor.close()
+
