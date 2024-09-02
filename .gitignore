@@ -1,5 +1,6 @@
 mysql_settings.json
-personal-website-env
+personalwebsiteenv
+static/css/styles.css
 
 .DS_Store
 
