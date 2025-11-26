@@ -12,7 +12,8 @@ app.config["DEBUG"] = True
 def before_request():
     # log the request
     timestamp = datetime.datetime.now()
-    hashed_ip = hashlib.md5(request.remote_addr.encode()).hexdigest()
+    hashed_ip = request.headers['X-Forwarded-for']
+    # hashed_ip = hashlib.md5(request.remote_addr.encode()).hexdigest()
 
     with open("logs.txt", "a") as f:
         f.write(f"{timestamp} - {hashed_ip} - {request.method} - {request.url}\n")

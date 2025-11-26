@@ -9,15 +9,54 @@
         </div>
         <div class="row gx-5 justify-content-center">
             <div class="col-lg-11 col-xl-9 col-xxl-8">
-                <!-- Project Card 1-->
+                <!-- proverbit -->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
                     <div class="card-body p-0">
                         <div class="d-flex align-items-center">
                             <div class="p-5">
+                                <h2 class="fw-bolder">ProverbIT</h2>
+                                <h6 class="mt-3"><a href="https://proverbit.lorenzozane.com/" class="text-decoration-none" target="_blank">ProverbIT website</a></h6>
+                                <h6 class="mt-1"><a href="https://iris.unito.it/bitstream/2318/2104630/1/mensa2025easy.pdf" class="text-decoration-none" target="_blank">ProverbIT paper</a></h6>
+                                <h6 class="mt-1"><a href="https://www.youtube.com/watch?v=VpgcB1SsTPQ" class="text-decoration-none" target="_blank">Video (in Italian)</a></h6>
+                                <div class="d-flex flex-wrap gap-2 mt-1">
+                                    <span class="badge bg-primary">Python</span>
+                                    <span class="badge bg-secondary">OpenRouter</span>
+                                </div>
+                                <p class="mt-3">ProverbIT is a benchmark designed to evaluate how Large Language Models handle the completion of Italian proverbs. The dataset includes 100 traditional proverbs, each paired with four carefully crafted alternative endings that challenge the model's understanding of meaning, rhyme, and logic. This project explores the discrepancy between the models' general familiarity with cultural content and their ability to apply it correctly in constrained tasks. The results offer insights into the types of errors LLMs make when interpreting idiomatic expressions.</p>
+                                <p>
+                                    The project was created in collaboration with <a href="https://www.di.unito.it/~mensa/" class="text-decoration-none" target="_blank">Enrico Mensa (aka Enkk)</a> and <a href="https://github.com/lorenzozane" class="text-decoration-none" target="_blank">Lorenzo Zane</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- tii-->
+                <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                    <div class="card-body p-0">
+                        <div class="d-flex align-items-center">
+                            <div class="p-5" style="width: 50%;">
                                 <h2 class="fw-bolder">TwitchItalia Insights</h2>
                                 <h6 class="mt-3"><a href="https://tii.milanitommaso.com/" class="text-decoration-none" target="_blank">TwitchItalia Insights Website</a></h6>
-                                <h6 class="mt-3"><a href="/github/twitch-communities-analysis" class="text-decoration-none" target="_blank">GitHub Repository</a></h6>
-                                <p>Project under development</p>
+                                <h6 class="mt-1"><a href="/github/twitch-communities-analysis" class="text-decoration-none" target="_blank">GitHub Repository</a></h6>
+                                <div class="d-flex flex-wrap gap-2 mt-1">
+                                    <span class="badge bg-primary">Python3</span>
+                                    <span class="badge bg-info">Pandas</span>
+                                    <span class="badge bg-success">NumPy</span>
+                                    <span class="badge bg-danger">JavaScript</span>
+                                    <span class="badge bg-secondary">Chart.js</span>
+                                </div>
+                                <p class="mt-3">
+                                    Collected and processed over 700 million messages from more than 1.9 million unique users by downloading all Italian Twitch chat data as of December 2023.
+                                </p>
+                                <p>
+                                    Conducted in-depth analyses on various aspects of the data, including raid patterns and emote usage.
+                                </p>
+                                <p>
+                                    Developed a visual graph using Gephi to map the relationships between different Twitch channels, revealing the proximity and connections between various communities.
+                                </p>
+                                <p>
+                                    Created a website where all analysis results are accessible, allowing both content creators and community managers to explore actionable insights and better understand their audiences.
+                                </p>
                             </div>
                             <div class="p-4">
                                 <img class="img-fluid" src="/static/projects/twitchitaliainsiights.png" width="300" height="300" alt="..." />
@@ -25,20 +64,62 @@
                         </div>
                     </div>
                 </div>
-                <!-- Project Card 4 -->
+                <!-- subvision -->
+                <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                    <div class="card-body p-0">
+                        <div class="d-flex align-items-center">
+                            <div class="p-5">
+                                <h2 class="fw-bolder">SubVision</h2>
+                                <h6 class="mt-3"><a href="https://github.com/milanitommaso/SubVision" class="text-decoration-none" target="_blank">GitHub Repository</a></h6>
+                                <div class="d-flex flex-wrap gap-2 mt-1">
+                                    <span class="badge bg-primary">Go</span>
+                                    <span class="badge bg-info">Python3</span>
+                                    <span class="badge bg-success">AWS SQS</span>
+                                    <span class="badge bg-warning text-dark">AWS DynamoDB</span>
+                                    <span class="badge bg-danger">Clerk</span>
+                                    <span class="badge bg-secondary">Websockets</span>
+                                </div>
+                                <p class="mt-3">This project is an interactive Twitch integration that enhances live-stream engagement by combining real-time events with user-generated content. Viewers log in through Twitch using Clerk and provide a written physical description of themselves, which is securely stored in AWS DynamoDB. A Go-based backend coordinates the system while a Python event listener monitors the livestream for triggers such as new subscriptions or donations. When an event occurs, an image is automatically generated from the viewer’s description and displayed on the stream, creating a dynamic, personalized experience. Communication between the backend and listener is handled through AWS SQS.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- subcanvas -->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
                     <div class="card-body p-0">
                         <div class="d-flex align-items-center">
                             <div class="p-5">
                                 <h2 class="fw-bolder">SubCanvas</h2>
                                 <h6 class="mt-3"><a href="https://enkk.me/subcanvas" class="text-decoration-none" target="_blank">SubCanvas Website</a></h6>
-                                <h6 class="mt-3"><a href="#" class="text-decoration-none" target="_blank">GitHub Repository</a></h6>
-                                <p>Subcanvas is a website where an image is initially obscured and divided into small sections. Throughout the month, users a from specific Twitch chat can reveal sections of the image by subscribing or donating, with a new image presented each month. I developed the backend for this project, handling subscription and donation detection, and exposing data via APIs. The project was created in collaboration with <a href="https://twitch.tv/enkk" class="text-decoration-none" target="_blank">Enkk</a> (a streamer who uses this project) and lorenzozane.</p>
+                                <div class="d-flex flex-wrap gap-2 mt-1">
+                                    <span class="badge bg-primary">Python3</span>
+                                    <span class="badge bg-info">Flask</span>
+                                    <span class="badge bg-success">IRC</span>
+                                </div>
+                                <p class="mt-3">Subcanvas is a website where an image is initially obscured and divided into small sections. Throughout the month, users a from specific Twitch chat can reveal sections of the image by subscribing or donating, with a new image presented each month. I developed the backend for this project, handling subscription and donation detection, and exposing data via APIs. The project was created in collaboration with <a href="https://twitch.tv/enkk" class="text-decoration-none" target="_blank">Enkk</a> (a streamer who uses this project) and lorenzozane.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Project Card 3-->
+                <!-- partnerplus points endpoint -->
+                <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                    <div class="card-body p-0">
+                        <div class="d-flex align-items-center">
+                            <div class="p-5">
+                                <h2 class="fw-bolder">Twitch Partner Plus Points Enpoint</h2>
+                                <h6 class="mt-3"><a href="https://partner-plus.milanitommaso.com" class="text-decoration-none" target="_blank">Project Website</a></h6>
+                                <div class="d-flex flex-wrap gap-2 mt-1">
+                                    <span class="badge bg-info">Flask</span>
+                                    <span class="badge bg-success">APIs</span>
+                                </div>
+                                <p class="mt-3">
+                                    I created this enpoint to check Twitch Partner Plus Program Points. It can be used to make an overlay and show on stream the current points.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- myiptracker-->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
                     <div class="card-body p-0">
                         <div class="d-flex align-items-center">
@@ -51,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Project Card 4-->
+                <!-- personal website-->
                 <div class="card overflow-hidden shadow rounded-4 border-0">
                     <div class="card-body p-0">
                         <div class="d-flex align-items-center">
